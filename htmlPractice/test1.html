@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+  <title>DOM manipulation</title>
+</head>
+
+<body>
+  <h1>Doggies!</h1>
+  <p id="para1">Dog pics!</p>
+  <img src="http://cdn1-www.dogtime.com/assets/uploads/gallery/boxer-dogs-and-puppies/boxer-dogs-puppies-3.jpg" height="400" width="400" style="margin: 0 auto">
+  <br>
+  <a href="">Link to bing</a>
+  <script type="text/javascript">
+    var h1 = document.querySelector("h1");
+    h1.style.color = "pink";
+    document.getElementById("para1").style.fontSize = "20px";
+    var glink = document.getElementsByTagName("a");
+    glink.setAttribute("href","www.bing.com");
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+// Example data
+[
+{
+  first_name: "adit",
+  last_name: "ratnam",
+  hobbies: ["gaming", "running"],
+  friends: {
+    first_name: "aditya",
+    last_name: "ratman"
+  },
+  city: "bangalore"
+},
+{
+  first_name: "aditya",
+  last_name: "ratman",
+  hobbies: ["drawing", "running"],
+  friends: {
+    first_name: "bob",
+    last_name: "bro"
+  },
+  city: "mumbai"
+},
+{
+  first_name: "aditi",
+  last_name: "singh",
+  hobbies: ["gymnastics", "dancing"],
+  friends: {
+    first_name: "aditya",
+    last_name: "ratman"
+  },
+  city: "mumbai"
+},
+{
+  first_name: "bob",
+  last_name: "bro",
+  hobbies: ["gymming", "fighting"],
+  friends: {
+    first_name: "adit",
+    last_name: "ratnam"
+  },
+  city: "pune"
+}
+]
+// running mongo shell
+
+mongo --quiet
+// list databases
+
+show dbs
+
+// create and use new database
+use database-name-here
+
+// create db user
+
+db.createUser({
+user: "adit",
+pwd: "test",
+roles: ["readWrite", "dbAdmin"]
+});
+
+// creating collections
+
+db.createCollection('collection-name-here');
+
+// show collections in DB
+show collections
+
+// adding documents to collection
+db.collection-name.insert({first_name:"Adit", last_name:"Ratnam"});
+
+// find documents in collection, add pretty() at end
+db.collection-name.find();
+
+// update documents
+db.collection-name.update({'field to be updated'}, {'replaced with'});
+
+//updating documents with SET operator
+db.collection-name.update('field to be updated', {$set:{'field appended at the last'}});
+
+// increment numerical
+db.collection-name.update('field to be updated', {$inc:{'field to be incremented'}});
+
+// remove a field
+db.customers.update({'field'},{$unset:{age:1}});
+
+// upsert through update command
+
+db.customers.update({first_name: "Misty"}, {first_name: "Misty", last_name: "Ratnam"}, {upsert: true});
+
+// rename fields
+db.customers.update({first_name:"Adit"}, {$rename:{"gender":"sex"}});
+
+// REMOVING DOCUMENTS
+db.customers.remove("first_name": "Adit");
+
+// finding records using parameters in find()
+
+db.customers.find({$or:[{first_name:"Adit"},{gender:"Female"}]}).pretty();
+
+// sorting
+
+db.customers.find().sort({last_name:1});
+
+// count number of documents
+
+db.customers.find().count();
+
+// limiting the number of reocrds returned
+
+db.cutsomers.find().limit(number-here);
+
+// iterating thru records
+
+db.customers.find().forEach(function(doc){print("Name: "+ doc.first_name)});

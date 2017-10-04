@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JQuery Practice></title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <style>
+    body {
+      background: #f4f4f4;
+      font-size: 15px;
+      font-family: Verdana;
+    }
+
+    header {
+      background: #333;
+      color: #f4f4f4;
+      border-bottom: 3px #000 solid;
+      padding: 20px;
+      text-align: center;
+    }
+
+    #container {
+      margin: auto;
+      width: 90%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>JQuery Practice</h1>
+  </header>
+  <div id="container">
+    <h1 class="headingone">Heading One</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse <span>cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1 class="headingtwo">Heading Two</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse <span>cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <ul id="list">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+      </ul>
+  </div>
+  <script>
+  //$('.headingone').hide();
+  //$('h1.headingtwo').css('color','blue');
+
+  $('ul#list li:first').css('color', 'red');
+  </script>
+</body>
+
+</html>
