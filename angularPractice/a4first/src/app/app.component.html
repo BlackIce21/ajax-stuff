@@ -8,8 +8,8 @@
 <ol>
   <li *ngFor="let arr of myArr2">{{ arr }}</li>
 </ol>
-<p *ngIf='myArr; else temp2'>I exist</p>
-<ng-template #temp2>Other template</ng-template>
+<p *ngIf='myArr; else temp2'>I exist because of myArr in component.ts</p>
+<ng-template #temp2>Other template if myArr doesnt exist</ng-template>
 
 <img src='{{angularlogo}}'>
 <img [src]="angularlogo">
@@ -21,3 +21,7 @@
 
 <p [ngClass] = "classesTitle">This is styled using ngClass</p>
 <p [ngStyle] = "stylesTitle">This is styled using ngStyle</p>
+
+<p>This was returned using a service: {{ exProp }}</p>
+
+<p [@myAnimation] = 'state' (click) = 'animateMe()' class="anim"> Animate me!</p>

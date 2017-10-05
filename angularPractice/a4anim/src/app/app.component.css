@@ -1,16 +1,4 @@
-.red-style{
-  color: red;
-}
-
-#underlineMe{
-  text-decoration: underline;
-}
-
-.font-thru{
-  text-decoration: line-through;
-}
-
-.anim {
+p {
     width:200px;
     background:lightgray;
     margin: 100px auto;
