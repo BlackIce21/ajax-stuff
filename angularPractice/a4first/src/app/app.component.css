@@ -1,0 +1,11 @@
+.red-style{
+  color: red;
+}
+
+#underlineMe{
+  text-decoration: underline;
+}
+
+.font-thru{
+  text-decoration: line-through;
+}

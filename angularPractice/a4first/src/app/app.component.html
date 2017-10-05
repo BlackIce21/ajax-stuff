@@ -1,0 +1,23 @@
+<h1 [class] = "titleClass">First Tag</h1>
+<h2 [style.color]="bluey">Welcome to {{title}}, uses style binding</h2>
+<h3 [style.color] = "styleTitle ? 'green' : 'pink'" [id] = "idTitle">This uses ternary operator and style binding.</h3>
+<p [id] = "idTitle">{{obj.name}}</p>
+<ul>
+  <li *ngFor="let arr of myArr1">{{ arr }}</li>
+</ul>
+<ol>
+  <li *ngFor="let arr of myArr2">{{ arr }}</li>
+</ol>
+<p *ngIf='myArr; else temp2'>I exist</p>
+<ng-template #temp2>Other template</ng-template>
+
+<img src='{{angularlogo}}'>
+<img [src]="angularlogo">
+<img bind-src="angularlogo">
+
+<button [disabled]="btnStatus">Click me</button>
+
+<button (click) = "myEvent($e)">Event Button</button>
+
+<p [ngClass] = "classesTitle">This is styled using ngClass</p>
+<p [ngStyle] = "stylesTitle">This is styled using ngStyle</p>
